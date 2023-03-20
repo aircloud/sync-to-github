@@ -1,0 +1,45 @@
+{
+  "name": "chrome-ext",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "keywords": [
+    "chatgpt"
+  ],
+  "author": "aircloud",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/lab": "5.0.0-alpha.123",
+    "@mui/material": "^5.11.13",
+    "@octokit-next/core": "^2.7.0",
+    "@octokit/core": "^4.2.0",
+    "axios": "^1.3.3",
+    "classnames": "^2.3.2",
+    "octokit-next": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0",
+    "sass": "^1.58.3",
+    "turndown": "^7.1.1"
+  },
+  "devDependencies": {
+    "@octokit/types": "^9.0.0",
+    "@types/chrome": "^0.0.224",
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

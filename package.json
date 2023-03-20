@@ -1,0 +1,32 @@
+{
+  "name": "sync-to-github",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint:fix": "pnpm run lint --fix"
+  },
+  "keywords": [
+    "chatgpt"
+  ],
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  },
+  "lint-staged": {
+    "*.{json,md,yaml,yml}": "prettier --write",
+    "*.{js,ts,tsx,vue}": "eslint --fix",
+    "package.json": "sort-package-json"
+  },
+  "prettier": "@hai-platform/prettier-config",
+  "author": "aircloud",
+  "devDependencies": {
+    "@hai-platform/eslint-config": "^0.7.0",
+    "@hai-platform/eslint-config-react": "^0.7.0",
+    "@hai-platform/prettier-config": "^0.7.0",
+    "@hai-platform/tsconfig": "^0.7.0",
+    "eslint": "^8.18.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.8.4"
+  }
+}

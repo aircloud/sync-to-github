@@ -1,0 +1,8 @@
+node_modules
+dist
+coverage
+**/*.d.ts
+tests
+**/lib/*
+
+packages/studio-schemas/src/fst

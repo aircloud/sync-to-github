@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ES2020",
+    "skipLibCheck": true,
+    "paths": {
+      "react": ["./node_modules/@types/react"]
+    }
+  },
+  "include": ["./src", "./vite.config.ts"],
+  "exclude": ["./src/svgReplace"]
+}
