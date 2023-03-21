@@ -26,7 +26,7 @@
 
 1. 在 [converters](apps/chrome-ext/src/converters) 中参考现有项目，新增一个文件夹，用于实现 `BaseConverter`。
 2. 在 [content_script](apps/chrome-ext/src/content_script.ts) 中引入它，新增一个实例。
-3. 在 [manifest.jso](apps/chrome-ext/public/manifest.json) 中的 `content_scripts.matches` 中新增相应的正则匹配。
+3. 在 [manifest.json](apps/chrome-ext/public/manifest.json) 中的 `content_scripts.matches` 中新增相应的正则匹配。
 
 ## 潜在的功能
 
