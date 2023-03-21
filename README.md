@@ -15,6 +15,12 @@
 - [ChatGPT](https://chat.openai.com/)
 - [ShareGPT](https://sharegpt.com)
 
+## 问题反馈
+
+这是一个新工具，当前需要你的体验和反馈，欢迎来提出你遇到的问题。你可以在 [issues](https://github.com/aircloud/sync-to-github/issues) 页面反馈你遇到的问题。
+
+在提出问题的时候，建议可以附上比如控制台报错、截图信息、或者被分享到 [ShareGPT](https://sharegpt.com) 的对话地址
+
 ## 新增一个网站
 
 - 你可以在 issue 中新增一个 issue，记得添加 `add-a-website` Tag。
