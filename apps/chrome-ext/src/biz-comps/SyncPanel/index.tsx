@@ -79,6 +79,7 @@ export const SyncPanel = () => {
       })
       setSyncSuccess(true)
       setSyncLoading(false)
+      setSyncErrorText('')
     } catch (e) {
       if ((e as AxiosError).status === 422 && (e as AxiosError).message.includes('sha')) {
         const confirmPromise = new Promise<boolean>((rs) => {
@@ -99,6 +100,7 @@ export const SyncPanel = () => {
           })
           setSyncSuccess(true)
           setSyncLoading(false)
+          setSyncErrorText('')
         } catch (updateError) {
           setSyncErrorText((updateError as Error).message)
         }
