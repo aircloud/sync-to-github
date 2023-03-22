@@ -6,12 +6,12 @@ This is a Chrome extension that allows you to synchronize your web page content 
 
 ## Installation and Usage:
 
-- Download the latest zip package from the [Releases](<(https://github.com/aircloud/sync-to-github/releases)>) page on GitHub.
+- Download the latest zip package from the [Releases](https://github.com/aircloud/sync-to-github/releases) page on GitHub.
 - Extract the zip package to a local directory.
-- Open Google Chrome and navigate to chrome://extensions.
+- Open Google Chrome and navigate to [chrome://extensions](chrome://extensions).
 - Enable "Developer mode" in the top right corner of the page.
-- Click the "Load unpacked extension" button and select the directory where you \* extracted the zip package.
-- Click the "Settings" button in the top right corner of the page to set your \* AccessToken, repository, and directory information.
+- Click the "Load unpacked extension" button and select the directory where you extracted the zip package.
+- Click the "Settings" button in the top right corner of the page to set your AccessToken, repository, and directory information.
 
 First Use:
 
@@ -37,7 +37,7 @@ You can easily add support for a new website.
 - Import it into the [content_script](apps/chrome-ext/src/content_script.ts) and create a new instance.
 - Add the corresponding regular expression match to the "content_scripts.matches" field in the [manifest.json](apps/chrome-ext/public/manifest.json) file.
 
-## Potential Features:
+## Potential Features
 
 This is a newly launched project, and more features need to be improved, including but not limited to:
 
