@@ -1,5 +1,7 @@
 # sync-to-github
 
+[English Doc](./README.en.md)
+
 这是一个 Chrome 插件，可以将你的网页内容同步到 github 仓库中，例如与 ChatGPT 的对话。
 
 ![preview](./docs/preview.gif)
@@ -8,7 +10,10 @@
 
 在 [releases](https://github.com/aircloud/sync-to-github/releases) 中下载最新的 zip 包，解压缩，通过在 `设置 - 插件` 中，开启开发者模式后，点击 `加载已解压的扩展程序`，加载对应的文件夹完成安装。
 
-初次使用前，请点击右上角“设置”，设置你的 AccessToken、仓库和目录信息。
+初次使用：
+
+- **第一次安装，请刷新现有的页面**。
+- 点击右上角“设置”，设置你的 AccessToken、仓库和目录信息。
 
 当前支持列表：
 
