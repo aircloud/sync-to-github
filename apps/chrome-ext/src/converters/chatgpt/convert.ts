@@ -9,7 +9,7 @@ const turndownService = new TurndownService({
 
 export class ChatGPTConverter extends BaseConverter {
   override get isActive() {
-    return /chat.openai.com\/chat/.test(window.location.href)
+    return /chat.openai.com/.test(window.location.href)
   }
 
   override get currentFileName() {

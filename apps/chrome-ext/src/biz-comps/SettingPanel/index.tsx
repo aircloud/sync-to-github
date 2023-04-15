@@ -1,6 +1,5 @@
-import { Box, Button, TextField, Typography } from '@mui/material'
-import React, { useContext, useState } from 'react'
-import { SimpleToast } from '../../comps/SimpleToast'
+import { Box, TextField, Typography } from '@mui/material'
+import React, { useContext, useEffect, useState } from 'react'
 import { CONSTS } from '../../config'
 import { GlobalContext } from '../../reducer/context'
 import type { UserConfig } from '../../schema'
@@ -25,14 +24,6 @@ export const SettingPanel = () => {
   const [pathPrefix, setPathPrefix] = useState(globalContext.state.userConfig?.pathPrefix || '')
   const [branch, setBranch] = useState(globalContext.state.userConfig?.branch || '')
 
-  const [showSuccessToast, setShowSuccessToast] = React.useState(false)
-
-  const handleInfoToastClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
-      return
-    }
-    setShowSuccessToast(false)
-  }
   const syncSetting = () => {
     const { owner, repo } = getRepoAndOwnerFromGitURL(repoURL)
     const userConfig = {
@@ -48,8 +39,12 @@ export const SettingPanel = () => {
       type: 'userConfig',
       value: userConfig as UserConfig,
     })
-    setShowSuccessToast(true)
   }
+
+  useEffect(() => {
+    syncSetting()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [accessToken, repoURL, pathPrefix, branch])
 
   return (
     <Box
@@ -122,24 +117,6 @@ export const SettingPanel = () => {
           size="small"
         />
       </div>
-      <div>
-        <Button
-          variant="contained"
-          onClick={syncSetting}
-          sx={{
-            marginTop: '15px',
-            minWidth: '100px',
-          }}
-        >
-          Update
-        </Button>
-      </div>
-
-      <SimpleToast
-        message={'Update Success!'}
-        isOpen={showSuccessToast}
-        onClose={handleInfoToastClose}
-      />
     </Box>
   )
 }
