@@ -1,6 +1,6 @@
 {
   "name": "sync-to-github",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.tsx .",
