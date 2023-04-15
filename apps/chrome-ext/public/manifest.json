@@ -1,8 +1,8 @@
 {
-  "name": "ChatGPT Github Sync",
-  "version": "0.1.1",
+  "name": "Sync Content Helper",
+  "version": "0.1.2",
   "manifest_version": 3,
-  "description": " Github Sync",
+  "description": "Synchronize content or conversations from your web pages",
   "icons": {
     "128": "icon_128.png"
   },
@@ -14,7 +14,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://chat.openai.com/chat*",
+        "https://chat.openai.com/*",
         "https://sharegpt.com/c/*"
       ],
       "js": [
