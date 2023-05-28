@@ -1,6 +1,6 @@
 {
   "name": "Sync Content Helper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "manifest_version": 3,
   "description": "Synchronize content or conversations from your web pages",
   "icons": {
