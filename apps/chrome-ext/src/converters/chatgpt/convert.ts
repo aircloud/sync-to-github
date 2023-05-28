@@ -13,18 +13,14 @@ export class ChatGPTConverter extends BaseConverter {
   }
 
   override get currentFileName() {
-    const titlesContainer = document.getElementsByClassName(
-      'flex-col flex-1 overflow-y-auto border-b border-white/20',
-    )[0]
+    const titlesContainer = document.querySelector(
+      'div > nav  a.hover\\:bg-gray-800 div.flex-1.text-ellipsis.max-h-5.overflow-hidden.break-all.relative',
+    )
 
     try {
-      const activeNode = [...(titlesContainer?.childNodes?.[0]?.childNodes || [])].find((node) => {
-        return (node as HTMLDivElement).className.includes('bg-gray-800')
-      })
-
-      if (activeNode) {
-        return `${(activeNode.childNodes[1] as HTMLElement).innerText || ''}.md`
-      }
+      return (titlesContainer as HTMLDivElement)?.innerText
+        ? `${(titlesContainer as HTMLDivElement)?.innerText}.md`
+        : ''
     } catch (e) {
       // do nothing
     }
@@ -34,7 +30,7 @@ export class ChatGPTConverter extends BaseConverter {
 
   convert(): string {
     const threadContainer = document.getElementsByClassName(
-      'flex flex-col items-center text-sm dark:bg-gray-800',
+      'flex flex-col text-sm dark:bg-gray-800',
     )[0]
 
     let res = ''
